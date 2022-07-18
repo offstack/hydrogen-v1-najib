@@ -75,6 +75,7 @@ const COLLECTION_QUERY = gql`
             id
             title
             tags
+            handle
             availableForSale
             publishedAt
             compareAtPriceRange {

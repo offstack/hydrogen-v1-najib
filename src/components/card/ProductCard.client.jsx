@@ -13,7 +13,6 @@ import {getProductPlaceholder} from '../../lib/placeholder'
 // import {getProductPlaceholder} from '~/lib/placeholders';
 
 export function ProductCard({product, label, className, loading, onClick}) {
-    console.log("🚀 ~ file: ProductCard.client.jsx ~ line 16 ~ ProductCard ~ product", product.featuredImage.url)
     let cardLabel;
 
   const cardData = product?.variants ? product : getProductPlaceholder();
@@ -22,7 +21,6 @@ export function ProductCard({product, label, className, loading, onClick}) {
     image,
     priceV2: price,
   } = flattenConnection(cardData?.variants)[0] || {};
-    console.log("🚀 ~ file: ProductCard.client.jsx ~ line 25 ~ ProductCard ~ image", image)
 
   cardLabel = label;
 
