@@ -7,6 +7,8 @@ import {
   Seo,
 } from "@shopify/hydrogen";
 import { Suspense } from "react";
+import { Section } from '../../components/elements/Section';
+import { Layout } from '../../components/Layout.server';
 import { ProductDetail } from '../../components/product/ProductDetail.client';
 
 export default function Product({params}) {
@@ -23,9 +25,11 @@ export default function Product({params}) {
 
 
       return (
-          <div>
-            {<ProductDetail product={product} />}
-          </div>
+          <Layout>
+            <Section>
+              <ProductDetail product={product} />
+            </Section>
+          </Layout>
       ) 
 }
 
